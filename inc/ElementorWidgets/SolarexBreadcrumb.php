@@ -2,7 +2,7 @@
 namespace Solarex\Core\ElementorWidgets;
 
 if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly
+    exit; 
 }
 
 class SolarexBreadcrumb extends \Elementor\Widget_Base
@@ -63,8 +63,6 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
         );
 
 
-
-        // Custom Breadcrumb Repeater
         $this->add_control(
             'custom_breadcrumbs',
             [
@@ -107,7 +105,6 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
             ]
         );
 
-        // Add Typography Control for Breadcrumb Title
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -116,7 +113,7 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_section(); // Corrected method name
+        $this->end_controls_section(); 
 
     }
     protected function render()
@@ -130,10 +127,9 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
         $home_page_title = get_the_title($home_page_id);
         $current_page_title = get_the_title();
 
-        $settings['home_page_title'] = $home_page_title; // Add home page title to settings
-        $settings['current_page_title'] = $current_page_title; // Add current page title to settings
+        $settings['home_page_title'] = $home_page_title; 
+        $settings['current_page_title'] = $current_page_title; 
 
-        // Auto Breadcrumb
         if ($breadcrumb_type === 'auto') {
             ?>
             <div class="auto-breadcrumbs">
@@ -143,7 +139,7 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
             <?php
         }
 
-        // Custom Breadcrumb
+
         elseif ($breadcrumb_type === 'custom') {
             ?>
             <div class="custom-breadcrumbs">
