@@ -153,7 +153,6 @@ class SolarexBreadcrumb extends \Elementor\Widget_Base
                         echo '<span><a class="breadcrumb_title_size" href="' . esc_url($breadcrumb_url) . '" style="color: ' . esc_attr($breadcrumb_color) . ';">' . esc_html($breadcrumb_title) . '</a></span> /&nbsp;';
                     }
                 } else {
-                    // Default breadcrumb when no custom breadcrumbs are set
                     echo '<span><a href="' . esc_url(home_url()) . '" style="color: green;">' . esc_html($home_page_title) . '</a></span> /&nbsp;';
                     echo '<span style="color: green;">' . esc_html($current_page_title) . '</span>';
                 }
